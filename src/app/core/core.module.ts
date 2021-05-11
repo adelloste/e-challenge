@@ -2,6 +2,7 @@ import { ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core
 
 import { SharedModule } from '../shared/shared.module';
 
+import { ApiService }            from './services/api.service';
 import { StorageManagerService } from './services/storage-manager.service';
 
 @NgModule({
@@ -9,6 +10,7 @@ import { StorageManagerService } from './services/storage-manager.service';
         SharedModule
     ],
     providers: [
+        ApiService,
         StorageManagerService
     ]
 })
@@ -22,6 +24,7 @@ export class CoreModule {
         return {
             ngModule: CoreModule,
             providers: [
+                ApiService,
                 StorageManagerService
             ]
         };

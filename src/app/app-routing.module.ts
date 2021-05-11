@@ -6,10 +6,10 @@ const APP_ROUTES: Routes = [
     path: 'chat',
     loadChildren: () => import('./chat/chat.module').then(m => m.ChatModule)
   },
-  {
-    path: '**',
-    redirectTo: '/chat'
-  }
+  // {
+  //   path: '**',
+  //   redirectTo: '/chat'
+  // }
 ];
 
 @NgModule({
