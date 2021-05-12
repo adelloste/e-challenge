@@ -1,5 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit }           from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+import { StorageManagerService } from '@Core/services/storage-manager.service';
 
 import { Message } from '@Core/models/message';
 
@@ -15,12 +17,11 @@ export class ChatMessagesComponent implements OnInit {
   chatForm: FormGroup;
 
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private storageManager: StorageManagerService
   ) { }
 
   ngOnInit(): void {
-    console.log("LEEEEEEEEEE");
-    console.log(this.messages);
     this.createForm();
   }
 
@@ -34,8 +35,28 @@ export class ChatMessagesComponent implements OnInit {
   }
 
   send(): void {
-    // get value
-    // console.log(this.chatForm.getRawValue());
+    // create message
+    let msg: Message = {
+      id: '1',
+      image: 'https://bootdey.com/img/Content/avatar/avatar1.png',
+      name: 'Alessandro',
+      surname: 'Dell\'Oste',
+      nickname: 'adelloste',
+      date: Date.now(),
+      message: this.chatForm.value.message
+    }
+    // add message
+    this.messages.push(msg);
+    // get stored msgs
+    let msgs: Message[] = this.storageManager.get('en-messages');
+    // save message
+    if(msgs) {
+      msgs = msgs.concat([msg]);
+    }
+    else {
+      msgs = [msg];
+    }
+    this.storageManager.store<Message[]>('en-messages', msgs);
     // reset form
     this.chatForm.reset();
   }

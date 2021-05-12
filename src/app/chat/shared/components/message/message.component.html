@@ -1,0 +1,17 @@
+<div class="message" [ngClass]="{ 'message-right': (message?.nickname === 'adelloste') }">
+    <!-- <p class="time-stamp">
+        <span class="user">Alessandro</span>
+    </p> -->
+    <div class="wrapper-up">
+        <span class="user">{{ message?.name }} {{ message?.surname }}</span>
+        <span class="time">{{ message?.date | date:'M/d/yyyy h:mm' }}</span>
+    </div>
+    <div class="avatar">
+        <img class="img-circle avatar" alt="chat avatar" src="https://bootdey.com/img/Content/avatar/avatar1.png">
+    </div>
+    <div class="message-text-wrapper" >
+        <div class="message-text">
+            {{ message?.message }}
+        </div>
+    </div>
+</div>

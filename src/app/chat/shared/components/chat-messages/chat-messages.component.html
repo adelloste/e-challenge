@@ -1,7 +1,8 @@
 <div class="chat-messages">
     <div class="chat-messages-show-container">
-        <ul class="chat-messages-show-list">
-        </ul>
+        <en-message
+            *ngFor="let message of messages"
+            [message]="message"></en-message>
     </div>
     <div class="chat-messages-create-container">
         <form [formGroup]="chatForm" (ngSubmit)="send()" novalidate>
@@ -9,7 +10,7 @@
                 <label class="sr-only" for="message">Chat</label>
                 <input type="text" class="form-control input-box" id="message" placeholder="Enter note about the precess" formControlName="message">
             </div>
-            <button type="submit" class="btn btn-primary float-right btn-box">Publish</button>
+            <button type="submit" class="btn btn-primary btn-box">Publish</button>
         </form>
     </div>
 </div>

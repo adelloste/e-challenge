@@ -5,6 +5,7 @@ import { ChatRoutingModule } from './chat-routing.module';
 
 import { ChatComponent }         from './chat/chat.component';
 import { ChatMessagesComponent } from './shared/components/chat-messages/chat-messages.component';
+import { MessageComponent }      from './shared/components/message/message.component';
 
 import { ChatService } from './shared/services/chat.service';
 
@@ -15,7 +16,8 @@ import { ChatService } from './shared/services/chat.service';
     ],
     declarations: [
         ChatComponent,
-        ChatMessagesComponent
+        ChatMessagesComponent,
+        MessageComponent
     ],
     providers: [
         ChatService

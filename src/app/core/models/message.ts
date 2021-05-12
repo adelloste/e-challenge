@@ -1,3 +1,9 @@
 export interface Message {
-    text: string;
+    id: string;
+    image: string;
+    name: string;
+    surname: string;
+    nickname: string;
+    date: number;
+    message: string;
 }

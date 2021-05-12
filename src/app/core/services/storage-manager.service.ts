@@ -5,7 +5,7 @@ export class StorageManagerService {
 
     constructor() { }
 
-    store(key: string, value: any): void {
+    store<T>(key: string, value: T): void {
         localStorage.setItem(key, JSON.stringify(value));
     }
 
