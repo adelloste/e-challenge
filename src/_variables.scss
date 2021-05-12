@@ -1,11 +1,15 @@
 $white: #FFFFFF;
-$a: #C2CDDD;
+$border: #C2CDDD;
 $b: #FFFFFF00;
 $c: #0E141A1A;
 $d: #667790;
-$e: #EFF2F7;
+$background: #EFF2F7;
 $f: #00000029;
 $black: #000000;
 $g: #0E141A;
 $h: #CACFD5;
 $btn: #D3135A;
+
+$theme-colors: (
+  "primary": #D3135A
+);

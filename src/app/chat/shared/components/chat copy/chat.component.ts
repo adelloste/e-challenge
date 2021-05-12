@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ChatService } from '../shared/services/chat.service';
+import { ChatService } from '../services/chat.service';
 
 import { Message } from '@Core/models/message';
 
@@ -11,8 +11,6 @@ import { Message } from '@Core/models/message';
 })
 export class ChatComponent implements OnInit {
 
-  messages: Message[];
-
   constructor(
     private chat: ChatService
   ) { }
@@ -20,7 +18,7 @@ export class ChatComponent implements OnInit {
   ngOnInit(): void {
     this.chat.getMessages().subscribe(
       (data: Message[]) => {
-        this.messages = data;
+        console.log(data);
       }
     );
   }
