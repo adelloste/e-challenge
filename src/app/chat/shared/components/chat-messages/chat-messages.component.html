@@ -1,6 +1,6 @@
 <div class="chat-messages">
     <div class="chat-messages-show-container">
-        <div style="padding: 10px 0px;" *ngFor="let message of messages">
+        <div class="wrapper-message" *ngFor="let message of messages">
             <en-message
                 [message]="message"></en-message>
         </div>
