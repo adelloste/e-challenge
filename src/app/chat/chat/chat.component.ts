@@ -22,15 +22,17 @@ export class ChatComponent implements OnInit {
   ngOnInit(): void {
     this.chat.getMessages().subscribe(
       (data: Message[]) => {
-        // get stored msgs
+        // get stored messages
         let msgs: Message[] = this.storageManager.get('en-messages');
-        // merge messags
+        // merge messages
         if(msgs) {
-          this.messages = data.concat(msgs);
+          msgs = data.concat(msgs);
         }
         else {
-          this.messages = data;
+          msgs = data;
         }
+        // sort messages
+        this.messages = msgs.sort((a, b) => a.date - b.date);
       }
     );
   }

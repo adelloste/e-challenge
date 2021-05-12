@@ -1,8 +1,9 @@
 <div class="chat-messages">
     <div class="chat-messages-show-container">
-        <en-message
-            *ngFor="let message of messages"
-            [message]="message"></en-message>
+        <div style="padding: 10px 0px;" *ngFor="let message of messages">
+            <en-message
+                [message]="message"></en-message>
+        </div>
     </div>
     <div class="chat-messages-create-container">
         <form [formGroup]="chatForm" (ngSubmit)="send()" novalidate>
