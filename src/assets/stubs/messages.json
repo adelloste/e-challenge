@@ -1,7 +1,7 @@
 [
     {
         "id": "cf8de213-25c6-427f-aae2-758e80839167",
-        "image": "https://bootdey.com/img/Content/avatar/avatar1.png",
+        "image": "./assets/imgs/avatar-1.png",
         "name": "Marco",
         "surname": "Rossidfd",
         "nickname": "mrossi",
@@ -10,7 +10,7 @@
     },
     {
         "id": "b6fc6252-f5bc-4c46-9177-911868737c14",
-        "image": "https://bootdey.com/img/Content/avatar/avatar1.png",
+        "image": "./assets/imgs/avatar-2.jpg",
         "name": "Alessandro",
         "surname": "Dell'Oste",
         "nickname": "adelloste",
@@ -19,7 +19,7 @@
     },
     {
         "id": "b6fc6252-f5bc-4c46-9177-911868737c14",
-        "image": "https://bootdey.com/img/Content/avatar/avatar1.png",
+        "image": "./assets/imgs/avatar-1.png",
         "name": "Paolo",
         "surname": "Rossi",
         "nickname": "prossi",

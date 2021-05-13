@@ -11,15 +11,8 @@
     </div>
 
     <div class="chat-messages-create-container">
-        <form [formGroup]="chatForm" (ngSubmit)="send()" novalidate>
-            <div class="form-group">
-                <label class="sr-only" for="message">Chat</label>
-                <input type="text" class="form-control input-box" id="message" placeholder="Enter note about the precess" formControlName="message">
-            </div>
-            <div class="text-right">
-                <button type="submit" class="btn btn-primary btn-box">Publish</button>
-            </div>
-        </form>
+        <en-chat-input
+            (onMessage)="onMessage($event)"></en-chat-input>
     </div>
 
 </div>

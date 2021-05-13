@@ -1,17 +1,9 @@
-
-
-<div style="display: flex; flex-direction: row-reverse; padding: 10px 0;" [ngStyle]="{ 'justify-content': message?.nickname === 'adelloste' ? 'flex-start': 'flex-end' }">
+<div class="wrapper-message" [ngClass]="message?.nickname === 'adelloste' ? 'wrapper-message-input' : 'wrapper-message-agent'">
     <div class="message" [ngClass]="message?.nickname === 'adelloste' ? 'input' : 'agent'">
-        <!-- <p>Hello! My name is James, how can I help you today?</p> -->
-
-        <!-- <div class="wrapper-up">
-            <span class="user">{{ message?.name }} {{ message?.surname }}</span>
-            <span class="time">{{ message?.date | date:'M/d/yyyy h:mm' }}</span>
-        </div> -->
         <div class="avatar">
-            <img class="img-circle avatar" alt="chat avatar" src="https://bootdey.com/img/Content/avatar/avatar1.png">
+            <img class="img-circle avatar" alt="chat avatar" src="{{ message?.image }}">
         </div>
-        <div style="width: 100%;">
+        <div class="box">
             <div class="wrapper-up">
                 <span class="user">{{ message?.name }} {{ message?.surname }}</span>
                 <span class="time">{{ message?.date | date:'M/d/yyyy h:mm' }}</span>
@@ -22,7 +14,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 

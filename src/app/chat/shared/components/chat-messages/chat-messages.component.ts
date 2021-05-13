@@ -34,17 +34,7 @@ export class ChatMessagesComponent implements OnInit {
     });
   }
 
-  send(): void {
-    // create message
-    let msg: Message = {
-      id: '1',
-      image: 'https://bootdey.com/img/Content/avatar/avatar1.png',
-      name: 'Alessandro',
-      surname: 'Dell\'Oste',
-      nickname: 'adelloste',
-      date: Date.now(),
-      message: this.chatForm.value.message
-    }
+  onMessage(msg: Message): void {
     // add message
     this.messages.push(msg);
     // get stored msgs
@@ -57,7 +47,6 @@ export class ChatMessagesComponent implements OnInit {
       msgs = [msg];
     }
     this.storageManager.store<Message[]>('en-messages', msgs);
-    // reset form
-    this.chatForm.reset();
   }
+
 }
