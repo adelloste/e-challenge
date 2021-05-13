@@ -1,17 +1,25 @@
-<div class="chat-messages">
-    <div class="chat-messages-show-container">
-        <div class="wrapper-message" *ngFor="let message of messages">
-            <en-message
-                [message]="message"></en-message>
-        </div>
+<div class="wrapper-chat">
+    
+    <div class="header">
+      <button class="btn-close"><svg viewBox="0 0 47.971 47.971"><path fill="white" d="M28.228 23.986L47.092 5.122a2.998 2.998 0 000-4.242 2.998 2.998 0 00-4.242 0L23.986 19.744 5.121.88a2.998 2.998 0 00-4.242 0 2.998 2.998 0 000 4.242l18.865 18.864L.879 42.85a2.998 2.998 0 104.242 4.241l18.865-18.864L42.85 47.091c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879a2.998 2.998 0 000-4.242L28.228 23.986z"/></svg></button>
     </div>
+  
+    <div class="messages">
+        <en-message
+            *ngFor="let message of messages"
+            [message]="message"></en-message>
+    </div>
+
     <div class="chat-messages-create-container">
         <form [formGroup]="chatForm" (ngSubmit)="send()" novalidate>
             <div class="form-group">
                 <label class="sr-only" for="message">Chat</label>
                 <input type="text" class="form-control input-box" id="message" placeholder="Enter note about the precess" formControlName="message">
             </div>
-            <button type="submit" class="btn btn-primary btn-box">Publish</button>
+            <div class="text-right">
+                <button type="submit" class="btn btn-primary btn-box">Publish</button>
+            </div>
         </form>
     </div>
+
 </div>
