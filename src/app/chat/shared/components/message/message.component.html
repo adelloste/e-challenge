@@ -1,5 +1,5 @@
-<div class="wrapper-message" [ngClass]="message?.nickname === 'adelloste' ? 'wrapper-message-input' : 'wrapper-message-agent'">
-    <div class="message" [ngClass]="message?.nickname === 'adelloste' ? 'input' : 'agent'">
+<div class="wrapper-message" [ngClass]="message?.nickname === currentUser ? 'wrapper-message-input' : 'wrapper-message-agent'">
+    <div class="message">
         <div class="avatar">
             <img class="img-circle avatar" alt="chat avatar" src="{{ message?.image }}">
         </div>
@@ -10,7 +10,9 @@
             </div>
             <div class="message-text-wrapper">
                 <div class="message-text">
-                    {{ message?.message }}
+                    <en-read-more
+                        [text]="message?.message"
+                        [maxHeight]="75"></en-read-more>
                 </div>
             </div>
         </div>

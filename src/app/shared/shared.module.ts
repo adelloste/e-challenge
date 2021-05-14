@@ -3,6 +3,8 @@ import { CommonModule }        from '@angular/common';
 import { RouterModule }        from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { ReadMoreComponent } from './components/read-more/read-more.component';
+
 @NgModule({
     imports: [
         CommonModule,
@@ -10,12 +12,14 @@ import { ReactiveFormsModule } from '@angular/forms';
         ReactiveFormsModule
     ],
     declarations: [
-
+        ReadMoreComponent
     ],
     exports: [
         CommonModule,
         RouterModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        
+        ReadMoreComponent
     ]
 })
 export class SharedModule { }

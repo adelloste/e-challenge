@@ -8,6 +8,11 @@
    &-input {
       justify-content: flex-start;
 
+      .message {
+         position: relative;
+         flex-direction: row-reverse;
+      } 
+
       .message-text {
          background: $border 0% 0% no-repeat padding-box;
       }
@@ -16,6 +21,10 @@
    &-agent {
       justify-content: flex-end;
 
+      .message {
+         position: relative;
+      }
+
       .message-text {
          background: $background 0% 0% no-repeat padding-box;
       }
@@ -23,7 +32,6 @@
 
    .message {
       display: flex;
-      align-items: center;
       width: 60%;
 
       // Smartphone
@@ -33,7 +41,7 @@
 
       .avatar {
          width: 55px;
-         margin: -15px 5px 0px 5px;
+         margin: 0px 5px 0px 5px;
 
          img {
             height: 40px;
@@ -70,14 +78,5 @@
          }
       }
    }
-    
-   .message.agent {
-      position: relative;
-   }
-   
-   .message.input {
-      position: relative;
-      flex-direction: row-reverse;
-   }   
 
 }
