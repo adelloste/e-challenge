@@ -1,27 +1,51 @@
 # EChallenge
 
+Advanced Notes
+
+## Getting Started
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.3.
 
-## Development server
+### Clone the repo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```shell
+git clone https://github.com/adelloste/e-challenge.git
+cd e-challenge
+```
 
-## Code scaffolding
+### Install npm packages
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Install packages described in` package.json`
 
-## Build
+```shell
+npm install
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+#### npm scripts
 
-## Running unit tests
+Questi sono i comandi definiti in `package.json`:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* `npm run start` - for a dev server.
+* `npm run build` - prod build the project.
 
-## Running end-to-end tests
+### Demo
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Published site at https://csb-hy3sk-jb59g2p9p-adelloste.vercel.app
 
-## Further help
+## Project structure
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+e-challenge/
+└── e2e
+└── src
+    ├── app
+    │   ├── chat
+    │   │   ├── shared
+    │   │   ├── chat
+    │   │   ├── chat-routing.module.ts
+    │   │   └── chat.module.ts
+    │   ├── core
+    │   └── shared
+    ├── assets
+    └── environments
+```
