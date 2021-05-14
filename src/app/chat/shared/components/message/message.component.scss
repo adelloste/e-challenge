@@ -15,6 +15,16 @@
 
       .message-text {
          background: $border 0% 0% no-repeat padding-box;
+
+         &::before {
+            content: "";
+            position: absolute;
+            visibility: visible;
+            top: 0px;
+            right: -8px;
+            border: 10px solid transparent;
+            border-top: 10px solid $border;
+         }
       }
    }
 
@@ -27,6 +37,16 @@
 
       .message-text {
          background: $background 0% 0% no-repeat padding-box;
+
+         &::before {
+            content: "";
+            position: absolute;
+            visibility: visible;
+            top: 0px;
+            border: 10px solid transparent;
+            border-top: 10px solid $background;
+            left: -8px;
+         }
       }
    }
 
@@ -41,7 +61,7 @@
 
       .avatar {
          width: 55px;
-         margin: 0px 5px 0px 5px;
+         margin: 5px 5px 0px 5px;
 
          img {
             height: 40px;
@@ -75,6 +95,7 @@
 
          .message-text {
             padding: 15px;
+            position: relative;
          }
       }
    }
