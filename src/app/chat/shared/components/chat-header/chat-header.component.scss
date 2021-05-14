@@ -1,0 +1,25 @@
+@import "../../../../../variables";
+
+.header {
+   text-align: center;
+   padding: 0.5em;
+   background-color: $primary;
+   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
+   line-height: 1.3;
+   color: $white;
+   display: flex;
+   align-items: center;
+
+   .btn-close {
+      margin-left: auto;
+      height: 2em;
+      width: 2em;
+      background: transparent;
+      border: none;
+   }
+    
+   .btn-close svg {
+      height: 1em;
+      width: 1em;
+   }
+}
