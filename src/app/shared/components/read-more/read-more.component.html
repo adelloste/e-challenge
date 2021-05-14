@@ -1,4 +1,4 @@
 <div [innerHTML]="text" [class.collapsed]="isCollapsed" [style.height]="isCollapsed ? maxHeight + 'px' : 'auto'"></div>
-<a class="text-primary cursor-pointer" *ngIf="isCollapsable" (click)="isCollapsed =! isCollapsed">
-    ...Read {{ isCollapsed ? 'more' : 'less' }}
+<a class="text-primary cursor-pointer" *ngIf="isCollapsable" (click)="changeStatus()">
+    ...Read more
 </a>

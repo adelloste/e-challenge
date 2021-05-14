@@ -34,4 +34,10 @@ export class ReadMoreComponent implements OnInit, AfterViewInit {
     this.cdRef.detectChanges();
   }
 
+  changeStatus(): void {
+    // show all message and remove cta "Read More"
+    this.isCollapsed = false;
+    this.isCollapsable = false;
+  }
+
 }
