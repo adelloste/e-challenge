@@ -9,7 +9,7 @@
       justify-content: flex-start;
 
       .message-text {
-         background: #C2CDDD 0% 0% no-repeat padding-box;
+         background: $border 0% 0% no-repeat padding-box;
       }
    }
 
@@ -17,7 +17,7 @@
       justify-content: flex-end;
 
       .message-text {
-         background: #EFF2F7 0% 0% no-repeat padding-box;
+         background: $background 0% 0% no-repeat padding-box;
       }
    }
 
@@ -50,17 +50,16 @@
             .user {
                font-size: 14px;
                text-align: left;
-               font: normal normal bold 14px/18px Univers LT Std;
+               font-family: 'Univers LT Bold';
                letter-spacing: 0px;
-               color: #0E141A;
+               color: $user;
                opacity: 1;
             }
 
             .time {
                float: right;
-               font: normal normal normal 12px/18px Univers LT Std;
                letter-spacing: 0px;
-               color: #667790;
+               color: $time;
                opacity: 1;
             }
             
@@ -71,32 +70,14 @@
          }
       }
    }
-
-   .message p {
-      border-radius: 0.25em;
-      padding: 0.5em;
-      margin-bottom: 1em;
-   }
     
    .message.agent {
       position: relative;
-   
-      p {
-         background-color: var(--primary);
-         color: var(--txt-light);
-         border-radius: 4px;
-      }
    }
    
    .message.input {
       position: relative;
       flex-direction: row-reverse;
-   
-         p {
-            background-color: var(--secondary);
-            text-align: right;
-            color: var(--txt-light);
-         }
    }   
 
 }

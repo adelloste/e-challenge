@@ -1,8 +1,23 @@
 @import "variables";
 @import "bootstrap/scss/bootstrap";
 
+@font-face {
+    font-family: 'Univers LT Roman';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Univers LT Roman'), url('./assets/fonts/Univers LT 55 Roman.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Univers LT Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Univers LT Bold'), url('./assets/fonts/Univers LT 65 Bold.woff') format('woff');
+}
+
 body, html {
     height: 100%;
+    font-family: 'Univers LT Roman';
 }
 
 /* width */

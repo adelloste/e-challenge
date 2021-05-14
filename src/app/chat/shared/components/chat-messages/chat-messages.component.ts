@@ -49,4 +49,6 @@ export class ChatMessagesComponent implements OnInit {
     this.storageManager.store<Message[]>('en-messages', msgs);
   }
 
+  search(): void { }
+
 }
