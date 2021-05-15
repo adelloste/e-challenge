@@ -32,20 +32,22 @@ export class ChatInputComponent implements OnInit {
   }
 
   send(): void {
-    // create message
-    let msg: Message = {
-      id: '1',
-      image: './assets/imgs/avatar-2.jpg',
-      name: 'Alessandro',
-      surname: 'Dell\'Oste',
-      nickname: 'adelloste',
-      date: Date.now(),
-      message: this.chatForm.value.message
+    if(this.chatForm.value.message && this.chatForm.value.message !== '') {
+      // create message
+      let msg: Message = {
+        id: '1',
+        image: './assets/imgs/avatar-2.jpg',
+        name: 'Alessandro',
+        surname: 'Dell\'Oste',
+        nickname: 'adelloste',
+        date: Date.now(),
+        message: this.chatForm.value.message
+      }
+      // add message
+      this.onMessage.emit(msg);
+      // reset form
+      this.chatForm.reset();
     }
-    // add message
-    this.onMessage.emit(msg);
-    // reset form
-    this.chatForm.reset();
   }
 
 }
